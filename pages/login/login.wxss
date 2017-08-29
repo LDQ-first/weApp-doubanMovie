@@ -1,0 +1,136 @@
+.login {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .loading {
+    perspective: 1000px; 
+}
+
+.login .loading .loading-img {
+     animation: show 1s linear forwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translateZ(-1000px);
+    }
+    100% {
+        transform: translateZ(200px);
+    }
+}
+
+
+.login .content {
+    width: 100%;
+    animation: show 2s ease-in-out;
+}
+
+@keyframes show {
+    from {
+        opacity: 0; 
+        transform: translateZ(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(200px);
+    }
+}
+
+.login .head {
+    height: 26vh;
+    width: 100%;
+    color: #FFF;
+    font-size: 80rpx;
+    background: #258DCD;
+    text-align: center;
+    padding: 80rpx 0;
+    box-sizing: border-box;
+}
+
+.login .main {
+    height: 74vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login .main .main-top {
+    background: #258DCD;
+    position: relative;
+    height: 300rpx;
+}
+
+.login .main .main-top .avatar{
+    width: 160rpx;
+    height: 160rpx; 
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    margin-left: -80rpx;
+    box-shadow: 0 1px 5px rgba(0,0,0,.4),
+                0 2px 8px rgba(0,0,0,.2);
+    animation: sway 10s ease-in-out infinite;
+}
+
+@keyframes sway {
+     0% {transform: translate3d(0,20rpx,0) rotate(-15deg); }
+    17% {transform: translate3d(-20rpx,0rpx,0) rotate(25deg); }
+    34% {transform: translate3d(0,-20rpx,0) rotate(-20deg); }
+    50% {transform: translate3d(20rpx,-10rpx,0) rotate(15deg); }
+    67% {transform: translate3d(-15rpx,10rpx,0) rotate(-25deg); }
+    84% {transform: translate3d(-30rpx,15rpx,0) rotate(15deg); }
+    100% {transform: translate3d(0,20rpx,0) rotate(-15deg); }
+}
+
+.login .main .main-top .wave {
+    height: 260rpx;
+    width: 2250rpx;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+    animation: wave 10s linear infinite;
+}
+
+.login .main .main-top .wave-bg {
+    animation: wave-bg 11s linear infinite;
+}
+
+@keyframes wave{
+  from {transform: translateX(125rpx);}
+  to {transform: translateX(1125rpx);}
+}
+@keyframes wave-bg{
+  from {transform: translateX(375rpx);}
+  to {transform: translateX(1375rpx);}
+}
+
+.login .main .main-bottom {
+    flex: 1;
+    background: #E1EBF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .main .main-bottom .enter-btn  {
+    border-radius: 50%;
+    width: 300rpx;
+    height: 300rpx;
+    line-height: 300rpx;
+    background: #EEE;
+    text-align: center;
+    font-size: 40rpx;
+    box-shadow: 0 0px 3px 0 rgba(17, 66, 95, 0.3),
+                0 3px 5px 0 rgba(17, 66, 95, 0.1);
+}
+
+.login .main .main-bottom .enter-btn:active {
+    background: #91DA8B;
+    color: #EEE;
+}

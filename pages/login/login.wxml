@@ -1,0 +1,26 @@
+<view class="login">
+    <block wx:if="{{loading}}">
+        <view class="loading" >
+            <image class="loading-img" src="../../images/loading/loading.gif"></image>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="content">
+            <view class="head">
+                <text class="login-title">豆瓣电影</text>
+            </view>
+            <view class="main" >
+                <view class="main-top">
+                    <image class="avatar" src="../../images/login/avatar.jpg"></image>
+                    <image class="wave" mode="aspectFill" src="../../images/login/wave.png"></image>
+                    <image class="wave wave-bg" mode="aspectFill" src="../../images/login/wave.png"></image>
+                </view>
+                <view class="main-bottom"> 
+                    <view class="enter-btn">
+                        开启探索之路
+                    </view>
+                </view>
+            </view>
+         </view>
+    </block>
+</view>
