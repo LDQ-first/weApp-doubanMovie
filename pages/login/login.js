@@ -3,12 +3,6 @@ Page({
     data: {
         loading: true
     },
-    onUpper () {
-
-    },
-    onShow () {
-
-    },
     onLoad () {
         setTimeout(() => {
             this.setData({
@@ -16,12 +10,10 @@ Page({
             })
         }, 2000)
     },
-    onReady () {
-        
-    },
     onTap () {
-        wx.redirectTo({
-            url: ''
+        console.log('onTap')
+        wx.switchTab({
+            url: '../hot/hot'
         })
     },
     onShareAppMessage () {

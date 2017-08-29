@@ -1,6 +1,9 @@
 {
   "pages":[
-    "pages/login/login"
+    "pages/login/login",
+    "pages/hot/hot",
+    "pages/future/future",
+    "pages/top/top"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -8,6 +11,32 @@
     "navigationBarTitleText": "豆瓣电影",
     "navigationBarTextStyle":"white",
     "backgroundColor": "#258DCD"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "正在热映",
+        "pagePath": "pages/hot/hot",
+        "iconPath": "images/tabBar/hot.png",
+        "selectedIconPath": "images/tabBar/hot-actived.png"
+      },
+      {
+        "text": "即将上映",
+        "pagePath": "pages/future/future",
+        "iconPath": "images/tabBar/future.png",
+        "selectedIconPath": "images/tabBar/future-actived.png"
+      },
+      {
+        "text": "豆瓣Top250",
+        "pagePath": "pages/top/top",
+        "iconPath": "images/tabBar/top.png",
+        "selectedIconPath": "images/tabBar/top-actived.png"
+      }
+    ],
+    "backgroundColor": "rgba(238,238,238 ,1)",
+    "borderStyle": "white",
+    "color": "#444",
+    "selectedColor": "#3a94d2"
   },
   "networkTimeout": {
     "request": 10000,
