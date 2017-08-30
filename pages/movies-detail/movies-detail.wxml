@@ -1,0 +1,5 @@
+<import src="../stars/stars.wxml" />
+
+<view class="detail">
+    
+</view> 

@@ -8,7 +8,6 @@ Page({
     },
     onLoad () {
         console.log('load')
-        const _this = this
 
         return API.getHot({
                     start: 0,
@@ -68,8 +67,10 @@ Page({
                 searchCloseShow: app.globalData.searchCloseShow
             },
             searchValue: ''
-
         })
+    },
+    getDetail (id) {
+        console.log('id: ', id)
     },
     onMoreTap () {
         console.log('onMoreTap')

@@ -2,7 +2,7 @@
 <template name="movie">
     <view wx:for="{{list}}" wx:for-item="item" wx:key="key" class="main-list">
         <view class="item">
-            <image src="{{item.img}}" class="list-img"></image>
+            <image src="{{item.img}}" class="list-img" bindtap="getDetail(item.id)"></image>
             <view><text>{{item.title}}</text></view>
             <template is="stars" data="{{stars: item.stars, average: item.average}}"/>
             <view class="otherInfo">
