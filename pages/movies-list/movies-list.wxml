@@ -1,0 +1,9 @@
+<import src="../movie/movie.wxml"/>
+<template name="moviesList">
+    <view class="main">
+        <view class="title">
+            <text>{{title}}</text>
+        </view>
+        <template is="movie" data="{{list:list}}"/>
+    </view>
+</template>

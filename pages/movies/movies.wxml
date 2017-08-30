@@ -1,17 +1,13 @@
 <import src="../search/search.wxml"/>
 <import src="../more/more.wxml"/>
-<import src="../movie/movie.wxml"/>
-<template name="movie-list">
+<import src="../movies-list/movies-list.wxml" />
+
+<template name="movies">
     <view class="page">
         <view class="head">
             <template is="search"/>
             <template is="more"/>
         </view>
-        <view class="main">
-            <view class="title">
-                <text>{{title}}</text>
-            </view>
-            <template is="movie" data="{{list:list}}"/>
-        </view>
+        <template is="moviesList" data="{{title:title, list:list}}"/>
     </view>
 </template>

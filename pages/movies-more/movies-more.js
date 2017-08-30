@@ -1,19 +1,15 @@
 const API = require('../../utils/api.js')
 const Util = require('../../utils/util.js')
 
-
 Page({
     data: {
-      
+
     },
     onLoad () {
         console.log('load')
         const _this = this
-
-        return API.getHot({
-                    start: 0,
-                    count: 6
-                  })
+        
+        return API.getHot()
                   .then(subjects => {
                       console.log('hotSubjects: ', subjects)
                       this.setData({
@@ -33,20 +29,5 @@ Page({
             duration: 2000
         })
     },
-    onBindFocus () {
-        Util.serachFocus()
-    },
-    onBindBlur () {
 
-    },
-    onCancelImgTap () {
-
-    },
-
-    onMoreTap () {
-        console.log('onMoreTap')
-        wx.navigateTo({
-            url: '../movies-more/movies-more'
-        })
-    }
 })

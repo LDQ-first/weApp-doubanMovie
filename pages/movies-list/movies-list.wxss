@@ -1,0 +1,14 @@
+@import '../movie/movie.wxss';
+
+
+.main {
+    flex: 1;
+}
+
+.main .title{
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40rpx;
+}

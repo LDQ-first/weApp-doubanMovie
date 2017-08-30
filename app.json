@@ -3,7 +3,7 @@
     "pages/hot/hot",
     "pages/future/future",
     "pages/top/top",
-    "pages/movies/movies"
+    "pages/movies-more/movies-more"
   ],
   "window":{
     "backgroundTextStyle":"light",

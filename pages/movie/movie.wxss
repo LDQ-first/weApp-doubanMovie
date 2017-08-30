@@ -1,3 +1,5 @@
+@import '../stars/stars.wxss';
+
 .main-list {
     flex: 1;
     display: inline-flex;
