@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
     data: {
-      
+      searchData: []
     },
     onLoad () {
         console.log('load')
@@ -49,23 +49,28 @@ Page({
         console.log('search: ', this.search)
     },
     onBindBlur (e) {
+        this.setData({
+            searchValue: e.detail.value
+        })
         Util.searchBlur(API, e.detail.value).then(() => {
             this.setData({
                 searchData: app.globalData.searchData
             })
         })
+        e.detail = {value: ''}
+    },
+    hideSearch () {
+        Util.hideSearch()
         this.setData({
+            searchData: app.globalData.searchData,
             search: {
-                    searchPanelShow: app.globalData.searchPanelShow,
-                    searchCloseShow: app.globalData.searchCloseShow
-                }
+                searchPanelShow: app.globalData.searchPanelShow,
+                searchCloseShow: app.globalData.searchCloseShow
+            },
+            searchValue: ''
+
         })
-        
     },
-    onCancelImgTap () {
-
-    },
-
     onMoreTap () {
         console.log('onMoreTap')
         wx.navigateTo({

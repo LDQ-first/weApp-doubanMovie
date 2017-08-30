@@ -9,6 +9,9 @@
 </template>
 <template name="searchList">
      <view class="searchResult">
+        <view class="title">
+            <text>{{searchValue}}</text>
+        </view>
         <template is="movie" data="{{list:searchData}}"/>
     </view>
 </template>    

@@ -3,9 +3,9 @@
         <icon type="search" class="search-icon" size="13" color="#258DCD"></icon>
         <input class="search-input" type="text" 
         placeholder="输入演员或片名" placeholder-style="color:#258DCD" 
-        placeholder-class="placeholder" 
+        placeholder-class="placeholder" value="{{searchValue}}"
         bindfocus="onBindFocus" bindblur="onBindBlur"/>
         <image wx:if="{{searchCloseShow}}" src="../../../images/icon/close.png" 
-        class="close-img" bindtap="onCancelImgTap"></image>
+        class="close-img" bindtap="hideSearch"></image>
     </view>
 </template>

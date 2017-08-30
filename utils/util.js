@@ -73,7 +73,6 @@ const searchFocus = () => {
 
 const searchBlur = (API, value) => {
     console.log('blur')
-    app.globalData.searchCloseShow = false
     if(value != '') {
         return API.getSearch({q: value})
             .then(searchData => {
@@ -85,10 +84,17 @@ const searchBlur = (API, value) => {
      }
 }
 
+const hideSearch = () => {
+    console.log('hideSearch')
+    app.globalData.searchCloseShow = false
+    app.globalData.searchPanelShow = false
+    app.globalData.searchData = []
+}
 
 module.exports = {
     searchFocus: searchFocus,
     searchBlur: searchBlur,
+    hideSearch: hideSearch,
     objToParam: objToParam,
     titleSlice: titleSlice,
     genreSlice: genreSlice,

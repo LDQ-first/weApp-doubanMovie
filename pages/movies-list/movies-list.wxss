@@ -14,5 +14,13 @@
 }
 
 .searchResult {
-    padding: 40rpx 0;
+    padding: 20rpx 0;
+}
+
+.searchResult .title{
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40rpx;
 }
