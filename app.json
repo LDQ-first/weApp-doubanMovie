@@ -1,9 +1,11 @@
 {
   "pages":[
+    "pages/login/login",
     "pages/hot/hot",
     "pages/future/future",
     "pages/top/top",
-    "pages/movies-more/movies-more"
+    "pages/movies-more/movies-more",
+    "pages/movies-detail/movies-detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

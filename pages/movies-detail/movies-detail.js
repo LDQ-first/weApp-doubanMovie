@@ -7,12 +7,15 @@ Page({
     data: {
         
     },
-    onLoad () {
+    onLoad (option) {
           console.log('load')
-          return API.getDetail()
+          console.log('option.id: ' , option.id)
+          return API.getDetail(option.id)
                     .then( res => {
                         console.log('detailRes: ', res)
-                        
+                        this.setData({
+                            movie: res
+                        })
                     })
                     .catch(this.onError)
     },

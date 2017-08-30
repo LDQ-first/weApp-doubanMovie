@@ -4,11 +4,12 @@ const app = getApp()
 
 Page({
     data: {
-      searchData: []
+      searchData: [],
+      showHead: true
     },
     onLoad () {
         console.log('load')
-
+        
         return API.getHot({
                     start: 0,
                     count: 6
@@ -69,13 +70,16 @@ Page({
             searchValue: ''
         })
     },
-    getDetail (id) {
-        console.log('id: ', id)
+    getDetail (e) {
+        const id = e.currentTarget.dataset.id
+        wx.navigateTo({
+            url: '../movies-detail/movies-detail?id=' + id
+        })
     },
     onMoreTap () {
         console.log('onMoreTap')
         wx.navigateTo({
-            url: '../movies-more/movies-more'
+            url: '../movies-more/movies-more?type=hot'
         })
     }
 })

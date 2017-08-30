@@ -1,6 +1,7 @@
 /**app.wxss**/
 page {
   font-size: 28rpx;
-  font-family: "Microsoft YaHei"
+  font-family: "Microsoft YaHei";
+  color: #333;
 }
 

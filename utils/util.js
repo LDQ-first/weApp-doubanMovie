@@ -1,6 +1,36 @@
 const app = getApp()
 /*import {getSearch} from 'api.js'*/
 
+
+const douban_limit = () => {
+    const timestamp = Date.parse(new Date());
+    let requestDoubanTime = wx.getStorageSync('requestDoubanTime');
+    let requestDoubanNum = wx.getStorageSync('requestDoubanNum');
+    if (requestDoubanTime && timestamp - requestDoubanTime < 60000) {
+        wx.setStorageSync('requestDoubanNum', requestDoubanNum += 1);
+        if (requestDoubanNum < 35) {
+            //Lower than 35/m,pass            
+            return;
+        }
+        else {
+            wx.showToast({
+                title: '豆瓣api请求频率超35/m，小心',
+                icon: 'loading',
+                duration: 20000
+            })
+            return 'Dangerous'
+            //提示或者去别的地方
+            /* wx.redirectTo({
+                  url:"../pages/login/login"
+             });*/
+        }
+    }
+    else {
+        wx.setStorageSync('requestDoubanTime', timestamp);
+        wx.setStorageSync('requestDoubanNum', 1);
+    }
+}
+
 const objToParam = (obj) => {
     let param = ''
     for(let key of Object.keys(obj) ) {
@@ -92,6 +122,7 @@ const hideSearch = () => {
 }
 
 module.exports = {
+    douban_limit: douban_limit,
     searchFocus: searchFocus,
     searchBlur: searchBlur,
     hideSearch: hideSearch,

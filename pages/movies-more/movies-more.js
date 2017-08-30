@@ -5,17 +5,34 @@ Page({
     data: {
 
     },
-    onLoad () {
+    onLoad (option) {
         console.log('load')
         const _this = this
-        
-        return API.getHot()
-                  .then(subjects => {
+        console.log('option.type: ', option.type)
+
+        let title = ''
+        let req = {}
+        switch (option.type) {
+            case 'hot' :
+              req =  API.getHot()
+              title = '正在热映'
+              break;
+            case 'future' :
+              req =  API.getFuture()
+              title = '即将上映'
+              break;
+            case 'top' :
+              req =  API.getTop()
+              title = 'Top250'
+              break;
+        }
+
+            req.then(subjects => {
                       console.log('hotSubjects: ', subjects)
                       this.setData({
                           subjects: subjects,
                           allData: {
-                              title:  '正在热映', 
+                              title:  title, 
                               list: Util.createList(subjects)
                           } 
                       })

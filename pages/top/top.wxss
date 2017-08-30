@@ -1,0 +1,54 @@
+@import '../movies/movies.wxss';
+
+
+.main-list {
+    display: flex;
+    padding: 30rpx;
+    position: relative;
+}
+
+.main-list  .item {
+    height: 460rpx;
+}
+
+.main-list .list-img {
+    width: 260rpx;
+    height: 365rpx;
+    padding-bottom: 5rpx;
+    border: 20rpx solid #E1EBF0;
+    box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
+                0 3px 7px 0 rgba(17, 66, 95, 0.2);
+}
+
+.stars .stars-list {
+    display: flex;
+    flex-direction: row;
+    height: 48rpx;
+    margin-top: 6rpx;
+}
+
+.stars .stars-list .star-img {
+    padding-left: 3rpx;
+    height: 48rpx;
+    width: 48rpx;
+}
+
+.stars .average {
+    display:flex;
+    align-items:center;
+    font-size: 40rpx;
+}
+
+.otherInfo {
+    position: absolute;
+    left: 350rpx;
+    top: 30%;
+    font-size: 40rpx;
+}
+
+.movie-title {
+    position:absolute;
+    top: 30rpx;
+    left: 350rpx;
+    font-size: 50rpx;
+}

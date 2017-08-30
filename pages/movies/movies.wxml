@@ -4,8 +4,9 @@
 
 <template name="movies">
     <view class="page">
-        <view class="head">
-            <template is="search" data="{{searchPanelShow, searchCloseShow, searchValue}}"/>
+        <view class="head" wx:if="{{showHead}}">
+            <template is="search" 
+            data="{{searchPanelShow, searchCloseShow, searchValue}}"/>
             <template is="more" data="{{searchData}}"/>
         </view>
         <template is="{{searchPanelShow ? 'searchList' : 'moviesList'}}" 
