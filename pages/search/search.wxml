@@ -1,0 +1,11 @@
+<template name="search">
+    <view class="search">
+        <icon type="search" class="search-icon" size="13" color="#258DCD"></icon>
+        <input class="search-input" type="text" 
+        placeholder="输入演员或片名" placeholder-style="color:#258DCD" 
+        placeholder-class="placeholder" 
+        bindfocus="onBindFocus" bindblur="onBindBlur"/>
+        <image wx:if="{{searchPanelShow}}" src="../../../images/icon/close.png" 
+        class="close-img" bindtap="onCancelImgTap"></image>
+    </view>
+</template>

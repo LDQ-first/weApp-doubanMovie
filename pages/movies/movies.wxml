@@ -1,0 +1,18 @@
+<import src="../search/search.wxml"/>
+<import src="../more/more.wxml"/>
+<template name="movie-list">
+    <view class="page">
+        <view class="head">
+            <template is="search"/>
+            <template is="more"/>
+        </view>
+        <view class="main">
+            <view class="title">
+                <text>{{title}}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:for="{{list}}" wx:for-item="{{item}}" wx:key="key">
+
+    </view>
+</template>

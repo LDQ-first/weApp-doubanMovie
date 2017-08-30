@@ -2,7 +2,8 @@
   "pages":[
     "pages/hot/hot",
     "pages/future/future",
-    "pages/top/top"
+    "pages/top/top",
+    "pages/movies/movies"
   ],
   "window":{
     "backgroundTextStyle":"light",

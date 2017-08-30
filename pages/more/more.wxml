@@ -1,0 +1,6 @@
+<template name="more">
+    <view class="more" bindtap="onMoreTap">
+        <text class="more-text">更多</text>
+        <image class="more-img" src="../../../images/icon/arrow-right.png"></image>
+    </view>
+</template>

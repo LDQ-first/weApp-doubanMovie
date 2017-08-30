@@ -23,7 +23,7 @@ Page({
                           newObj.stars = obj.rating.stars
                           newObj.year = obj.year
                           newObj.img = obj.images.large
-                          console.log(newObj)
+                       //   console.log(newObj)
                           hotArr.push(newObj)
                       })
                       this.setData({
