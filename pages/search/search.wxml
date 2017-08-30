@@ -5,7 +5,7 @@
         placeholder="输入演员或片名" placeholder-style="color:#258DCD" 
         placeholder-class="placeholder" 
         bindfocus="onBindFocus" bindblur="onBindBlur"/>
-        <image wx:if="{{searchPanelShow}}" src="../../../images/icon/close.png" 
+        <image wx:if="{{searchCloseShow}}" src="../../../images/icon/close.png" 
         class="close-img" bindtap="onCancelImgTap"></image>
     </view>
 </template>

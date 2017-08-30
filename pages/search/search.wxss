@@ -1,6 +1,6 @@
 
 .search {
-  height: 80rpx;
+  height: 100%;
   width: 80%;
   display: flex;
 }
@@ -22,5 +22,5 @@
 .search .close-img {
     height: 30rpx;
     width: 30rpx;
-    margin-left: 10rpx;
+    margin: auto 0 auto 10rpx;
 }

@@ -5,9 +5,10 @@
 <template name="movies">
     <view class="page">
         <view class="head">
-            <template is="search" data="{{searchPanelShow: app.globalData.searchPanelShow}}"/>
+            <template is="search" data="{{searchPanelShow, searchCloseShow}}"/>
             <template is="more" />
         </view>
-        <template is="moviesList" data="{{title:title, list:list}}"/>
+        <template is="{{searchPanelShow ? 'searchList' : 'moviesList'}}" 
+        data="{{title:title, list:list, searchData: searchData}}"/>
     </view>
 </template>

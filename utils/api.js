@@ -82,8 +82,7 @@ const getTop = (param) => {
 const getSearch = (param) => {
     const url = param ? searchApi + '?' + objToParam(param) : searchApi
     console.log('searchUrl: ', url)
-    return Promise.resolve({
-         then:(resolve, reject) => {
+    return new Promise((resolve, reject) => {
             wx.request({
                 url: url,
                 header: { 'Content-Type': 'json' },
@@ -99,15 +98,15 @@ const getSearch = (param) => {
                     resolve({status: 'Error', msg: err})
                 }
             })
-         } 
-      }) 
+         }
+      )
 }
 
 
 const getDetail = (param) => {
-    const url = param ? detailApi + '?' + objToParam(param) : detailApi
+    const url = param ? detailApi + param : detailApi
     console.log('detailUrl: ', url)
-    return Promise.resolve({
+    return   Promise.resolve({
          then:(resolve, reject) => {
             wx.request({
                 url: url,
@@ -115,13 +114,13 @@ const getDetail = (param) => {
                 success (res) {
                     console.log(res.data)
                     if(res.data) {
-                        resolve(res.data)
+                      resolve(res.data)
                     } else {
-                        resolve({status: 'Error', msg: '不！获取电影详情失败 o(TωT)o '})
+                     resolve({status: 'Error', msg: '不！获取电影详情失败 o(TωT)o '})
                     }
                 },
                 fail (err) {
-                    resolve({status: 'Error', msg: err})
+                  resolve({status: 'Error', msg: err})
                 }
             })
          } 

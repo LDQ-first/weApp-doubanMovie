@@ -7,3 +7,8 @@
         <template is="movie" data="{{list:list}}"/>
     </view>
 </template>
+<template name="searchList">
+     <view class="searchResult">
+        <template is="movie" data="{{list:searchData}}"/>
+    </view>
+</template>    

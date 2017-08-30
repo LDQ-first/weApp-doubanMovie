@@ -18,6 +18,8 @@ App({
     topApi: "https://api.douban.com/v2/movie/top250",
     searchApi: "https://api.douban.com/v2/movie/search?q=",
     detailApi: "https://api.douban.com/v2/movie/subject/",
-    searchPanelShow: "fasle"
+    searchCloseShow: false,
+    searchPanelShow: false,
+    searchData: []    
   }
 })

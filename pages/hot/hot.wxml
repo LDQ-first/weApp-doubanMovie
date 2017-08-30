@@ -1,4 +1,5 @@
 <import src="../movies/movies.wxml"/>
 <view>
-    <template is="movies" data="{{title: allData.title, list: allData.list}}"/>
+    <template is="movies" 
+    data="{{...allData, ...search, searchData: searchData}}"/>
 </view>

@@ -1,4 +1,5 @@
-
+const app = getApp()
+/*import {getSearch} from 'api.js'*/
 
 const objToParam = (obj) => {
     let param = ''
@@ -47,6 +48,7 @@ const starsToArr = (stars) => {
 }
 
 const createList = (subjects) => {
+
     let hotArr = []
         subjects.forEach((obj, idx) => {
             let newObj = {}
@@ -63,13 +65,30 @@ const createList = (subjects) => {
 }
 
 
-const serachFocus = () => {
+const searchFocus = () => {
      console.log('foucs')
+     app.globalData.searchPanelShow = true
+     app.globalData.searchCloseShow = true
+}
+
+const searchBlur = (API, value) => {
+    console.log('blur')
+    app.globalData.searchCloseShow = false
+    if(value != '') {
+        return API.getSearch({q: value})
+            .then(searchData => {
+            return app.globalData.searchData = createList(searchData)
+            })
+            .then(searchData => {
+                console.log('app.globalData.searchData: ', app.globalData.searchData)
+            })
+     }
 }
 
 
 module.exports = {
-    serachFocus: serachFocus,
+    searchFocus: searchFocus,
+    searchBlur: searchBlur,
     objToParam: objToParam,
     titleSlice: titleSlice,
     genreSlice: genreSlice,
