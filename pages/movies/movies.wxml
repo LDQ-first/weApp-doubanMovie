@@ -1,5 +1,6 @@
 <import src="../search/search.wxml"/>
 <import src="../more/more.wxml"/>
+<import src="../stars/stars.wxml" />
 <template name="movie-list">
     <view class="page">
         <view class="head">
@@ -12,9 +13,17 @@
             </view>
             <view wx:for="{{list}}" wx:for-item="item" wx:key="key" class="main-list">
                 <view class="item">
-                    <view>{{item.id}}</view>
                     <image src="{{item.img}}" class="list-img"></image>
                     <view><text>{{item.title}}</text></view>
+                    <template is="stars" data="{{average: item.average}}"/>
+                    <view class="otherInfo">
+                        <view class="year"><text>{{item.year}}</text></view>
+                        <view class="genres" wx:for="{{item.genres}}" wx:for-item="genre" wx:key="key">
+                            <view class="genre">
+                                <text>{{genre}}</text>
+                            </view>
+                        </view>
+                    </view>
                 </view>
             </view>
         </view>

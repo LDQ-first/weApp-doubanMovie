@@ -11,7 +11,25 @@ const objToParam = (obj) => {
 }
 
 const titleSlice = (title) => {
+  let newTitle = ''
+   if(title.length > 6) {
+       newTitle = title.slice(0, 6) + '...'
+   }
+   else {
+       newTitle = title
+   }
+   return newTitle
+}
 
+const genreSlice = (genre) => {
+    let newGenre = []
+    if(genre.length > 3) {
+        newGenre = genre.slice(0,3)
+    }
+    else {
+        newGenre = genre
+    }
+    return newGenre
 }
 
 
@@ -23,5 +41,6 @@ const serachFocus = () => {
 module.exports = {
     serachFocus: serachFocus,
     objToParam: objToParam,
-    titleSlice: titleSlice
+    titleSlice: titleSlice,
+    genreSlice: genreSlice
 }

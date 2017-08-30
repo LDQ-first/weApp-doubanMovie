@@ -20,11 +20,11 @@ Page({
                       let hotArr = []
                       subjects.forEach((obj, idx) => {
                           let newObj = {}
-                          newObj.title = obj.title
+                          newObj.title = Util.titleSlice(obj.title)
                           newObj.id = obj.id
                           newObj.average = obj.rating.average
-                          newObj.stars = obj.rating.stars
-                          newObj.year = obj.year
+                          newObj.genres = Util.genreSlice(obj.genres)
+                          newObj.year = obj.year + '年'
                           newObj.img = obj.images.large
                        //   console.log(newObj)
                           hotArr.push(newObj)

@@ -1,5 +1,6 @@
 @import '../search/search.wxss';
 @import '../more/more.wxss'; 
+@import '../stars/stars.wxss';
 
 .page {
     display: flex;
@@ -17,7 +18,7 @@
 }
 
 .page .main .title{
-    height: 100rpx;
+    height: 80rpx;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +29,7 @@
     flex: 1;
     display: inline-flex;
     flex-direction: column;
-    padding: 40rpx 22rpx;
+    padding: 22rpx;
 }
 
 .page .main .main-list .list-img {
@@ -37,5 +38,16 @@
     padding-bottom: 20rpx;
 }
 
+.page .main .main-list .otherInfo {
+   
+}
+
+.page .main .main-list .genres {
+    display: inline-flex;
+}
+
+.page .main .main-list .genres .genre {
+    margin-right: 10rpx;
+}
 
 
