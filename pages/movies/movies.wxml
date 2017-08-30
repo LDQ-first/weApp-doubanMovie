@@ -11,8 +11,11 @@
                 <text>{{title}}</text>
             </view>
             <view wx:for="{{list}}" wx:for-item="item" wx:key="key" class="main-list">
-                <view>{{item.id}}</view>
-                <image src="{{item.img}}" class="list-img"></image>
+                <view class="item">
+                    <view>{{item.id}}</view>
+                    <image src="{{item.img}}" class="list-img"></image>
+                    <view><text>{{item.title}}</text></view>
+                </view>
             </view>
         </view>
     </view>

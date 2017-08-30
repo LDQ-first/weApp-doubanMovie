@@ -4,7 +4,7 @@
 .page {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .page .head {
@@ -26,10 +26,16 @@
 
 .page .main .main-list {
     flex: 1;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 40rpx 22rpx;
 }
 
-.page .main .main-list  .list-img {
+.page .main .main-list .list-img {
     width: 200rpx;
     height: 270rpx;
     padding-bottom: 20rpx;
 }
+
+
+

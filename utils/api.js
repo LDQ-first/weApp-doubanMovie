@@ -32,7 +32,7 @@ const getHot = (param) => {
 
 
 const getFuture = (param) => {
-    const url = param ? futureApi + '?' + param : futureApi
+    const url = param ? futureApi + '?' + objToParam(param) : futureApi
     console.log('futureUrl: ', url)
     return new Promise((resolve, reject) => {
         wx.request({
@@ -55,7 +55,7 @@ const getFuture = (param) => {
 
 
 const getTop = (param) => {
-    const url = param ? topApi + '?' + param : topApi
+    const url = param ? topApi + '?' + objToParam(param) : topApi
     console.log('topUrl: ', url)
     return Promise.resolve({
          then:(resolve, reject) => {
@@ -80,7 +80,7 @@ const getTop = (param) => {
 
 
 const getSearch = (param) => {
-    const url = param ? searchApi + '?' + param : searchApi
+    const url = param ? searchApi + '?' + objToParam(param) : searchApi
     console.log('searchUrl: ', url)
     return Promise.resolve({
          then:(resolve, reject) => {
@@ -105,7 +105,7 @@ const getSearch = (param) => {
 
 
 const getDetail = (param) => {
-    const url = param ? detailApi + '?' + param : detailApi
+    const url = param ? detailApi + '?' + objToParam(param) : detailApi
     console.log('detailUrl: ', url)
     return Promise.resolve({
          then:(resolve, reject) => {

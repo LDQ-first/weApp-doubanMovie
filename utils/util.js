@@ -10,6 +10,10 @@ const objToParam = (obj) => {
     return param.slice(0, param.length - 1)
 }
 
+const titleSlice = (title) => {
+
+}
+
 
 const serachFocus = () => {
      console.log('foucs')
@@ -18,5 +22,6 @@ const serachFocus = () => {
 
 module.exports = {
     serachFocus: serachFocus,
-    objToParam: objToParam
+    objToParam: objToParam,
+    titleSlice: titleSlice
 }
