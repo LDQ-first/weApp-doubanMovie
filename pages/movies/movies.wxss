@@ -1,0 +1,35 @@
+@import '../search/search.wxss';
+@import '../more/more.wxss'; 
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.page .head {
+    display: flex;
+    background: rgba(114, 186, 230, 0.3);
+}
+
+.page .main {
+    flex: 1;
+}
+
+.page .main .title{
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40rpx;
+}
+
+.page .main .main-list {
+    flex: 1;
+}
+
+.page .main .main-list  .list-img {
+    width: 200rpx;
+    height: 270rpx;
+    padding-bottom: 20rpx;
+}

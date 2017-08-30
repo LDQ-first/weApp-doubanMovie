@@ -1,6 +1,6 @@
 const API = require('../../utils/api.js')
 const app = getApp()
-
+const Util = require('../../utils/util.js')
 
 
 Page({
@@ -11,7 +11,10 @@ Page({
         console.log('load')
         const _this = this
 
-        return API.getHot()
+        return API.getHot({
+                    start: 0,
+                    count: 6
+                  })
                   .then(subjects => {
                       console.log('hotSubjects: ', subjects)
                       let hotArr = []
@@ -28,7 +31,10 @@ Page({
                       })
                       this.setData({
                           subjects: subjects,
-                          hot: hotArr
+                          allData: {
+                              title:  '正在热映', 
+                              list: hotArr
+                          } 
                       })
                   })
                   .catch(this.onError)
@@ -39,5 +45,17 @@ Page({
             title: err.msg + '',
             duration: 2000
         })
+    },
+    onBindFocus () {
+        Util.serachFocus()
+    },
+    onBindBlur () {
+
+    },
+    onCancelImgTap () {
+
+    },
+    onMoreTap () {
+
     }
 })

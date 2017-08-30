@@ -6,16 +6,5 @@ Page({
     onLoad () {
 
     },
-    onBindFocus () {
-        console.log('foucs')
-    },
-    onBindBlur () {
-
-    },
-    onCancelImgTap () {
-
-    },
-    onMoreTap () {
-
-    }
+    
 })

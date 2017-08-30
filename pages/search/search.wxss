@@ -1,0 +1,26 @@
+
+.search {
+  height: 80rpx;
+  width: 80%;
+  display: flex;
+}
+
+.search .search-icon {
+    margin: auto 0 auto 20rpx;
+}
+
+.search .search-input {
+    height: 100%;
+    width: 100%;
+    margin-left: 40rpx;
+}
+
+.search .placeholder {
+    margin-left: 20rpx;
+}
+
+.search .close-img {
+    height: 30rpx;
+    width: 30rpx;
+    margin-left: 10rpx;
+}
