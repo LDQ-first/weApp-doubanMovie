@@ -17,24 +17,11 @@ Page({
                   })
                   .then(subjects => {
                       console.log('hotSubjects: ', subjects)
-                      let hotArr = []
-                      subjects.forEach((obj, idx) => {
-                          let newObj = {}
-                          newObj.title = Util.titleSlice(obj.title)
-                          newObj.id = obj.id
-                          newObj.average = obj.rating.average
-                          newObj.stars = Util.starsToArr(obj.rating.stars)
-                          newObj.genres = Util.genreSlice(obj.genres)
-                          newObj.year = obj.year + '年'
-                          newObj.img = obj.images.large
-                       //   console.log(newObj)
-                          hotArr.push(newObj)
-                      })
                       this.setData({
                           subjects: subjects,
                           allData: {
                               title:  '正在热映', 
-                              list: hotArr
+                              list: Util.createList(subjects)
                           } 
                       })
                   })
@@ -56,6 +43,7 @@ Page({
     onCancelImgTap () {
 
     },
+
     onMoreTap () {
         console.log('onMoreTap')
     }

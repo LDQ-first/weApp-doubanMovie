@@ -46,6 +46,22 @@ const starsToArr = (stars) => {
     return arr
 }
 
+const createList = (subjects) => {
+    let hotArr = []
+        subjects.forEach((obj, idx) => {
+            let newObj = {}
+            newObj.title = titleSlice(obj.title)
+            newObj.id = obj.id
+            newObj.average = obj.rating.average
+            newObj.stars = starsToArr(obj.rating.stars)
+            newObj.genres = genreSlice(obj.genres)
+            newObj.year = obj.year + '年'
+            newObj.img = obj.images.large
+            hotArr.push(newObj)
+        })
+        return hotArr
+}
+
 
 const serachFocus = () => {
      console.log('foucs')
@@ -57,5 +73,6 @@ module.exports = {
     objToParam: objToParam,
     titleSlice: titleSlice,
     genreSlice: genreSlice,
-    starsToArr: starsToArr
+    starsToArr: starsToArr,
+    createList: createList
 }

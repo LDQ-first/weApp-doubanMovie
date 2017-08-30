@@ -1,6 +1,7 @@
 @import '../search/search.wxss';
 @import '../more/more.wxss'; 
 @import '../stars/stars.wxss';
+@import '../movie/movie.wxss';
 
 .page {
     display: flex;
@@ -25,25 +26,6 @@
     font-size: 40rpx;
 }
 
-.page .main .main-list {
-    flex: 1;
-    display: inline-flex;
-    flex-direction: column;
-    padding: 10rpx 22rpx;
-}
 
-.page .main .main-list .list-img {
-    width: 200rpx;
-    height: 270rpx;
-    padding-bottom: 20rpx;
-}
-
-.page .main .main-list .genres {
-    display: inline-flex;
-}
-
-.page .main .main-list .genres .genre {
-    margin-right: 10rpx;
-}
 
 
