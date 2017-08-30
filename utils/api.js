@@ -1,7 +1,8 @@
- const hotApi = app.globalData.hotApi,
+const app = getApp()
+const hotApi = app.globalData.hotApi,
        futureApi = app.globalData.futureApi,
        topApi = app.globalData.topApi,
-       searchApi = app.globalData.searchApi
+       searchApi = app.globalData.searchApi,
        detailApi = app.globalData.detailApi
 
 
@@ -11,6 +12,7 @@ const getHot = (param) => {
     return new Promise((resolve, reject) => {
         wx.request({
             url: url,
+            header: { 'Content-Type': 'json' },
             success (res) {
                 console.log(res.data)
                 if(res.data && res.data.subjects &&  res.data.subjects.length > 0 ) {
@@ -35,6 +37,7 @@ const getFuture = (param) => {
     return new Promise((resolve, reject) => {
         wx.request({
             url: url,
+            header: { 'Content-Type': 'json' },
             success (res) {
                 console.log(res.data)
                 if(res.data && res.data.subjects &&  res.data.subjects.length > 0 ) {
@@ -58,6 +61,7 @@ const getTop = (param) => {
          then:(resolve, reject) => {
             wx.request({
                 url: url,
+                header: { 'Content-Type': 'json' },
                 success (res) {
                     console.log(res.data)
                     if(res.data && res.data.subjects &&  res.data.subjects.length > 0 ) {
@@ -82,6 +86,7 @@ const getSearch = (param) => {
          then:(resolve, reject) => {
             wx.request({
                 url: url,
+                header: { 'Content-Type': 'json' },
                 success (res) {
                     console.log(res.data)
                     if(res.data && res.data.subjects &&  res.data.subjects.length > 0 ) {
@@ -106,6 +111,7 @@ const getDetail = (param) => {
          then:(resolve, reject) => {
             wx.request({
                 url: url,
+                header: { 'Content-Type': 'json' },
                 success (res) {
                     console.log(res.data)
                     if(res.data) {
