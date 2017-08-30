@@ -1,5 +1,9 @@
 <template name="stars">
     <view class="stars">
-        
+        <view class="stars-list" wx:for="{{stars}}" wx:for-item="star" wx:key="key">
+            <image class="star-img" wx:if="{{star}}" src="../../images/icon/star.png"></image>
+            <image class="star-img" wx:else src="../../images/icon/none-star.png"></image>
+        </view>
+        <view class="average"><text>{{average}}</text></view>
     </view>
 </template>

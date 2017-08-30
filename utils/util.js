@@ -32,6 +32,20 @@ const genreSlice = (genre) => {
     return newGenre
 }
 
+const starsToArr = (stars) => {
+    const num = stars.substring(0, 1)
+    let arr = []
+    for(let i = 1; i <= 5; i++) {
+        if(i <= num) {
+            arr.push(1)
+        }
+        else {
+            arr.push(0)
+        }
+    }
+    return arr
+}
+
 
 const serachFocus = () => {
      console.log('foucs')
@@ -42,5 +56,6 @@ module.exports = {
     serachFocus: serachFocus,
     objToParam: objToParam,
     titleSlice: titleSlice,
-    genreSlice: genreSlice
+    genreSlice: genreSlice,
+    starsToArr: starsToArr
 }

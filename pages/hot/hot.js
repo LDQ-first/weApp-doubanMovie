@@ -23,6 +23,7 @@ Page({
                           newObj.title = Util.titleSlice(obj.title)
                           newObj.id = obj.id
                           newObj.average = obj.rating.average
+                          newObj.stars = Util.starsToArr(obj.rating.stars)
                           newObj.genres = Util.genreSlice(obj.genres)
                           newObj.year = obj.year + '年'
                           newObj.img = obj.images.large
@@ -56,6 +57,6 @@ Page({
 
     },
     onMoreTap () {
-
+        console.log('onMoreTap')
     }
 })

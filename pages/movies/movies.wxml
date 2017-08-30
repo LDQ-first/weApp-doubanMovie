@@ -15,7 +15,7 @@
                 <view class="item">
                     <image src="{{item.img}}" class="list-img"></image>
                     <view><text>{{item.title}}</text></view>
-                    <template is="stars" data="{{average: item.average}}"/>
+                    <template is="stars" data="{{stars: item.stars, average: item.average}}"/>
                     <view class="otherInfo">
                         <view class="year"><text>{{item.year}}</text></view>
                         <view class="genres" wx:for="{{item.genres}}" wx:for-item="genre" wx:key="key">

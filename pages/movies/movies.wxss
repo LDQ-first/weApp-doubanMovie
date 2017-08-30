@@ -5,7 +5,7 @@
 .page {
     display: flex;
     flex-direction: column;
-    /*height: 100vh;*/
+    height: 100vh;
 }
 
 .page .head {
@@ -29,17 +29,13 @@
     flex: 1;
     display: inline-flex;
     flex-direction: column;
-    padding: 22rpx;
+    padding: 10rpx 22rpx;
 }
 
 .page .main .main-list .list-img {
     width: 200rpx;
     height: 270rpx;
     padding-bottom: 20rpx;
-}
-
-.page .main .main-list .otherInfo {
-   
 }
 
 .page .main .main-list .genres {
