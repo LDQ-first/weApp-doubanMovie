@@ -5,8 +5,8 @@
 <template name="movies">
     <view class="page">
         <view class="head">
-            <template is="search"/>
-            <template is="more"/>
+            <template is="search" data="{{searchPanelShow: app.globalData.searchPanelShow}}"/>
+            <template is="more" />
         </view>
         <template is="moviesList" data="{{title:title, list:list}}"/>
     </view>
