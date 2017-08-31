@@ -56,12 +56,13 @@ Page({
             this.setData({
                 searchValue: e.detail.value
             })
+            this.setData({hidden: false})
             Util.searchBlur(API, e.detail.value).then(() => {
                 this.setData({
                     searchData: app.globalData.searchData
                 })
+                this.setData({hidden: true})
             })
-            e.detail = {value: ''}
         } else {
             this.hideSearch()
         }
@@ -94,8 +95,8 @@ Page({
         wx.showNavigationBarLoading()
         this.onLoad()
             .then(() => {
-            wx.hideNavigationBarLoading()
-            wx.stopPullDownRefresh()
+                wx.hideNavigationBarLoading()
+                wx.stopPullDownRefresh()
             })
-    },
+    }
 })

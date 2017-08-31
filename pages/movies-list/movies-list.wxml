@@ -5,7 +5,7 @@
     </loading>
     <view class="main">
         <view class="title">
-            <text>{{title}}</text>
+            <text style="font-weight: bold;">{{title}}</text>
         </view>
         <template is="movie" data="{{list:list}}"/>
     </view>
@@ -16,7 +16,7 @@
     </loading>
      <view class="searchResult">
         <view class="title">
-            <text>{{searchValue}}</text>
+            <text style="font-weight: bold;">{{searchValue}}</text>
         </view>
         <template is="movie" data="{{list:searchData}}"/>
     </view>

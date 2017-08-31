@@ -6,7 +6,7 @@
 }
 
 .main .title{
-    height: 80rpx;
+    height: 70rpx;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,7 @@
 
 .searchResult {
     padding: 5rpx 0 20rpx;
+    font-weight: bold;
 }
 
 .searchResult .title{
@@ -33,15 +34,22 @@
     display: flex;
     text-align: center;
     padding: 0 22rpx;
+    
+}
+
+.searchResult .main-list .list-img {
+    padding-bottom: 0;
+    box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
+                0 3px 7px 0 rgba(17, 66, 95, 0.2);
 }
 
 .searchResult .main-list+.main-list {
-    padding-top: 30rpx;
+    padding-top: 20rpx;
 }
 
 .searchResult .main-list .stars .stars-list {
     height: 40rpx;
-    padding: 10rpx;
+    margin-bottom: 10rpx;
 }
 
 .searchResult .main-list .stars .stars-list .star-img {
@@ -52,5 +60,10 @@
 .searchResult .main-list .stars .average {
     display:flex;
     align-items:center;
+    font-size: 40rpx;
+}
+
+.searchResult .main-list .otherInfo {
     font-size: 30rpx;
 }
+

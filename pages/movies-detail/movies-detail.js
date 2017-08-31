@@ -61,9 +61,12 @@ Page({
     viewMoviePostImg (e) {
         const img = e.currentTarget.dataset.src
         console.log('img: ', img)
-        wx.previewImage({
-            current: img, // 当前显示图片的http链接
-            urls: [img] // 需要预览的图片http链接列表
-        })
+        if(img) {
+            wx.previewImage({
+                current: img, // 当前显示图片的http链接
+                urls: [img] // 需要预览的图片http链接列表
+            })
+        }
+        
     }
 })
