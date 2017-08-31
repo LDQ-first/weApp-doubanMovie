@@ -95,6 +95,8 @@ const createList = (subjects) => {
 }
 
 
+
+
 const searchFocus = () => {
      console.log('foucs')
      app.globalData.searchPanelShow = true

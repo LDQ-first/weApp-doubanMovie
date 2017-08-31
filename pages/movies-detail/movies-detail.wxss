@@ -1,4 +1,127 @@
+@import '../stars/stars.wxss';
 
 .detail {
-    
+    display: flex;
+    flex-direction: column;
 }
+
+.detail .head {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(17, 66, 95, 0.6);
+    margin-bottom: 30rpx;
+}
+
+.detail .head .img {
+    height: 500rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.detail .head .img .bg-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: blur(10px);
+}
+
+.detail .head .img .head-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260rpx;
+    height: 365rpx;
+    box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
+                0 3px 7px 0 rgba(17, 66, 95, 0.2);
+}
+
+.detail .head .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx;
+}
+
+.detail .head .info .intro {
+    flex: 1;
+}
+
+.detail .head .info .intro .intro-title{
+
+}
+
+.detail .head .info .intro .intro-year{
+
+}
+
+.detail .head .info .intro .intro-orig{
+
+}
+
+.detail .head .info .intro .intro-casts{
+
+}
+
+.detail .head .info .intro .intro-dire{
+
+}
+
+.detail .head .info .intro .intro-genres{
+
+}
+
+.detail .head .info .grade {
+    width: 200rpx;
+    height: 200rpx;
+    padding: 20rpx;
+    box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
+                0 3px 7px 0 rgba(17, 66, 95, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail .head .info .grade .grade-title{
+    color: #CCC;
+}
+
+.detail .head .info .grade .grade-average{
+    font-size: 60rpx;
+}
+
+.detail .head .info .grade .average{
+    display: none;
+}
+
+.detail .main {
+   display: flex;
+   flex-direction: column;
+}
+
+.detail .main .summary {
+    padding: 20rpx;
+}
+
+.detail .main .casts-dire {
+   padding: 20rpx;
+}
+
+.detail .main .casts-dire .directors,
+.detail .main .casts-dire .casts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.detail .main .casts-dire .directors .avatar,
+.detail .main .casts-dire .casts .avatar{
+    width: 200rpx;
+    height: 270rpx;
+    padding-bottom: 20rpx;
+    box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
+                0 3px 7px 0 rgba(17, 66, 95, 0.2);
+}
+
+
