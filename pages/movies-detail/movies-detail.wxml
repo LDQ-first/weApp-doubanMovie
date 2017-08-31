@@ -4,7 +4,8 @@
     <view class="head">
         <view class="img">
             <view class="bg-img" style="background: url({{movie.images.large}})"></view>
-            <image class="head-img" src="{{movie.images.large}}"></image>
+            <image class="head-img" src="{{movie.images.large}}" 
+            catchtap="viewMoviePostImg" data-src="{{movie.images.large}}"></image>
         </view>
         <view class="info">
             <view class="intro">
@@ -56,7 +57,7 @@
                 <view class="data-count">{{wish_count}}</view>
             </view>
              <view class="dataContent">
-                <view class="data-title">短片数</view>
+                <view class="data-title">短评数</view>
                 <view class="data-count">{{comments_count}}</view>
             </view>
              <view class="dataContent">
