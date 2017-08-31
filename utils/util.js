@@ -127,7 +127,15 @@ const hideSearch = () => {
     app.globalData.searchData = []
 }
 
+const isEmptyObject = (e) => {   
+        for (let t in e)  {
+            return !1
+        }
+        return !0  
+}
+
 module.exports = {
+    isEmptyObject: isEmptyObject,
     douban_limit: douban_limit,
     searchFocus: searchFocus,
     searchBlur: searchBlur,

@@ -9,14 +9,26 @@ Page({
     },
     onLoad (option) {
         console.log('load')
-        let param = !this.isEmptyObject(option) ? option : { start: 0, count: 6 }
+        let param = !Util.isEmptyObject(option) ? option : { start: 0, count: 6 }
         console.log('option: ', option)
         console.log('param: ', param)
+        this.setData({hidden: false})
         return API.getTop(param)
                   .then(subjects => {
                       console.log('hotSubjects: ', subjects)
                       if(this.data.subjects && this.data.allData) {
-                          
+                          console.log('this.data.subjects: ', this.data.subjects)
+                          console.log('this.data.subjects.concat(subjects): ', this.data.subjects.concat(subjects))
+                          console.log('this.data.allData: ', this.data.allData)
+                          console.log('this.data.allData.list.concat(Util.createList(subjects)): ', this.data.allData.list.concat(Util.createList(subjects)))
+                          this.setData({
+                                subjects: this.data.subjects.concat(subjects),
+                                allData: {
+                                    title:  'Top250', 
+                                    list: this.data.allData.list.concat(Util.createList(subjects))
+                                },
+                                index: param.start + param.count
+                            })
                       } 
                       else {
                           this.setData({
@@ -24,7 +36,8 @@ Page({
                             allData: {
                                 title:  'Top250', 
                                 list: Util.createList(subjects)
-                            }
+                            },
+                            index: param.start + param.count
                         })
                       }
                       
@@ -63,14 +76,16 @@ Page({
             wx.stopPullDownRefresh()
             })
     },
-    isEmptyObject(e) {   
-        for (let t in e)  
-            return !1;  
-        return !0  
-    },
     onReachBottom () {
         console.log('滚到底了')
-        this.onLoad({ start: 6, count: 6 })
+        if(this.data.index >= 250) {
+            wx.showToast({
+                title: '没有更多数据了',
+                duration: 2000
+            })
+            return
+        }
+        this.onLoad({ start: this.data.index, count: 48 })
             .then(() => {
             wx.hideNavigationBarLoading()
             wx.stopPullDownRefresh()

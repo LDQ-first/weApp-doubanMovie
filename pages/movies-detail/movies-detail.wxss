@@ -148,6 +148,11 @@
 
 .detail .main .figure .casts-dire .scrollX {
     padding: 20rpx;
+    padding-left: 0;
+}
+
+.detail .main .figure .casts-dire .scrollX+.scrollX {
+    padding-left: 20rpx;
 }
 
 .detail .main .data {
