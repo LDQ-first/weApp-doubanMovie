@@ -14,7 +14,7 @@
 }
 
 .searchResult {
-    padding: 20rpx 0;
+    padding: 5rpx 0 20rpx;
 }
 
 .searchResult .title{
@@ -23,4 +23,34 @@
     justify-content: center;
     align-items: center;
     font-size: 40rpx;
+}
+
+.searchResult .movie-title {
+    font-size: 40rpx;
+}
+
+.searchResult .main-list {
+    display: flex;
+    text-align: center;
+    padding: 0 22rpx;
+}
+
+.searchResult .main-list+.main-list {
+    padding-top: 30rpx;
+}
+
+.searchResult .main-list .stars .stars-list {
+    height: 40rpx;
+    padding: 10rpx;
+}
+
+.searchResult .main-list .stars .stars-list .star-img {
+     height: 40rpx;
+     width: 40rpx;
+}
+
+.searchResult .main-list .stars .average {
+    display:flex;
+    align-items:center;
+    font-size: 30rpx;
 }

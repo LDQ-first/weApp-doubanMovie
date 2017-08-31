@@ -16,7 +16,7 @@ App({
     hotApi: "https://api.douban.com/v2/movie/in_theaters",
     futureApi: "https://api.douban.com/v2/movie/coming_soon",
     topApi: "https://api.douban.com/v2/movie/top250",
-    searchApi: "https://api.douban.com/v2/movie/search?q=",
+    searchApi: "https://api.douban.com/v2/movie/search",
     detailApi: "https://api.douban.com/v2/movie/subject/",
     searchCloseShow: false,
     searchPanelShow: false,

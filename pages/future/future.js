@@ -49,15 +49,19 @@ Page({
         console.log('search: ', this.search)
     },
     onBindBlur (e) {
-        this.setData({
-            searchValue: e.detail.value
-        })
-        Util.searchBlur(API, e.detail.value).then(() => {
+        if(e.detail.value != '') {
             this.setData({
-                searchData: app.globalData.searchData
+                searchValue: e.detail.value
             })
-        })
-        e.detail = {value: ''}
+            Util.searchBlur(API, e.detail.value).then(() => {
+                this.setData({
+                    searchData: app.globalData.searchData
+                })
+            })
+            e.detail = {value: ''}
+        } else {
+            this.hideSearch()
+        }
     },
     hideSearch () {
         Util.hideSearch()

@@ -20,7 +20,7 @@
 }
 
 .search .close-img {
-    height: 30rpx;
-    width: 30rpx;
-    margin: auto 0 auto 10rpx;
+    height: 40rpx;
+    width: 40rpx;
+    padding:20rpx;
 }

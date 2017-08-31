@@ -103,15 +103,19 @@ const searchFocus = () => {
 
 const searchBlur = (API, value) => {
     console.log('blur')
-    if(value != '') {
-        return API.getSearch({q: value})
-            .then(searchData => {
-            return app.globalData.searchData = createList(searchData)
-            })
-            .then(searchData => {
-                console.log('app.globalData.searchData: ', app.globalData.searchData)
-            })
-     }
+    return API.getSearch({q: value})
+              .then(searchData => {
+                  if(searchData.length > 0) {
+                      return app.globalData.searchData = createList(searchData)
+                  } else {
+                      return app.globalData.searchData = [{
+                          title: '没有搜索到结果o(╥﹏╥)o'
+                      }]
+                  }
+              })
+              .then(searchData => {
+                  console.log('app.globalData.searchData: ', app.globalData.searchData)
+              })
 }
 
 const hideSearch = () => {

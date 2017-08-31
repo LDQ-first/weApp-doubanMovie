@@ -21,10 +21,6 @@ Page({
                           allData: {
                               title:  'Top250', 
                               list: Util.createList(subjects)
-                          },
-                          search: {
-                              searchPanelShow: app.globalData.searchPanelShow,
-                              searchCloseShow: app.globalData.searchCloseShow
                           }
                       })
                   })
@@ -36,38 +32,6 @@ Page({
             icon: 'loading',
             title: err.msg + '',
             duration: 2000
-        })
-    },
-    onBindFocus () {
-        Util.searchFocus()
-        this.setData({
-            search: {
-                searchPanelShow: app.globalData.searchPanelShow,
-                searchCloseShow: app.globalData.searchCloseShow
-            }
-        })
-        console.log('search: ', this.search)
-    },
-    onBindBlur (e) {
-        this.setData({
-            searchValue: e.detail.value
-        })
-        Util.searchBlur(API, e.detail.value).then(() => {
-            this.setData({
-                searchData: app.globalData.searchData
-            })
-        })
-        e.detail = {value: ''}
-    },
-    hideSearch () {
-        Util.hideSearch()
-        this.setData({
-            searchData: app.globalData.searchData,
-            search: {
-                searchPanelShow: app.globalData.searchPanelShow,
-                searchCloseShow: app.globalData.searchCloseShow
-            },
-            searchValue: ''
         })
     },
     getDetail (e) {
