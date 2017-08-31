@@ -60,6 +60,9 @@ Page({
             wx.hideNavigationBarLoading()
             wx.stopPullDownRefresh()
             })
+    },
+    onReachBottom () {
+        console.log('滚到底了')
     }
 
 })
