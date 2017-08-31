@@ -43,5 +43,26 @@
                 </view>
             </scroll-view>
         </view>
+        <view class="data">
+            <view class="data-allTitle">
+                <text class="bold">数据</text>
+            </view>
+            <view class="dataContent">
+                <view class="data-title">看过</view>
+                <view class="data-count">{{collect_count}}</view>
+            </view>
+             <view class="dataContent">
+                <view class="data-title">想看</view>
+                <view class="data-count">{{wish_count}}</view>
+            </view>
+             <view class="dataContent">
+                <view class="data-title">短片数</view>
+                <view class="data-count">{{comments_count}}</view>
+            </view>
+             <view class="dataContent">
+                <view class="data-title">影评数</view>
+                <view class="data-count">{{reviews_count}}</view>
+            </view>
+        </view>
     </view>
 </view>

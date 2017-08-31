@@ -21,7 +21,11 @@ Page({
                             castsName: this.ArrToStr(res.casts),
                             directors: res.directors,
                             directorsName: this.ArrToStr(res.directors),
-                            average: res.rating.average
+                            average: res.rating.average,
+                            collect_count: res.collect_count,
+                            comments_count: res.comments_count,
+                            wish_count: res.wish_count,
+                            reviews_count: res.reviews_count
                         })
                     })
                     .then(() => {
