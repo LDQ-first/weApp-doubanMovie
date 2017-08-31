@@ -16,7 +16,7 @@ Page({
                         this.setData({
                             movie: res,
                             stars: Util.starsToArr(res.rating.stars),
-                            genres: res.genres.join('/'),
+                            genres: res.genres.join(' / '),
                             casts: res.casts,
                             castsName: this.ArrToStr(res.casts),
                             directors: res.directors,
@@ -26,15 +26,15 @@ Page({
                     })
                     .then(() => {
                         this.setData({
-                            castsNameSlice: this.titleSlice(this.castsName),
-                            directorsNameSlice: this.titleSlice(this.directorsName),
+                            castsNameSlice: this.titleSlice(this.data.castsName),
+                            directorsNameSlice: this.titleSlice(this.data.directorsName),
                         })
                     })
                     .catch(this.onError)
     },
     titleSlice(name) {
         console.log('name: ', name)
-        let nameArrs = name.split('/')
+        let nameArrs = name.split(' / ')
         let newNameArrs = []
         nameArrs.forEach((nameArr, i) => {
             newNameArrs.push(Util.titleSlice(nameArr))
@@ -43,13 +43,13 @@ Page({
         return newNameArrs
     },
     ArrToStr(arrs) {
-         console.log('arrs: ', arrs)
+        console.log('arrs: ', arrs)
         let str = ''
         arrs.forEach((arr, idx) => {
-            str += arr.name + '/'
+            str += arr.name + ' / '
         })
-         console.log('str: ', str)
-        return str.slice(0, s.length - 1)
+         console.log('str: ', str.slice(0, str.length - 1))
+        return str.slice(0, str.length - 2)
     },
     onError (err) {
         wx.showToast({

@@ -10,10 +10,10 @@
             <view class="intro">
                 <view class="intro-title">{{movie.title}}</view>
                 <view class="intro-year">{{movie.year}}</view>
-                <view class="intro-orig">原名: {{movie.original_title}}</view>
-                <view class="intro-casts">影人: {{castsName}} </view>
-                <view class="intro-dire">导演: {{directorsName}}</view>
-                <view class="intro-genres">类型: {{genres}}</view>
+                <view class="intro-orig"><text class="bold">原名: </text>{{movie.original_title}}</view>
+                <view class="intro-casts"><text class="bold">影人: </text>{{castsName}} </view>
+                <view class="intro-dire"><text class="bold">导演: </text>{{directorsName}}</view>
+                <view class="intro-genres"><text class="bold">类型: </text>{{genres}}</view>
             </view>
             <view class="grade">
                 <view class="grade-title">豆瓣评分</view>
@@ -25,7 +25,7 @@
     </view>
     <view class="main">
         <view class="summary">
-            <view class="summary-title">简介</view>
+            <view class="summary-title"><text class="bold">简介</text></view>
             <view class="summary-content">{{movie.summary}}</view>
         </view>
         <scroll-view scroll-x class="casts-dire">
@@ -35,7 +35,7 @@
                 <view class="directors-name" >{{directorsNameSlice[index]}}</view>
             </view>
              <view class="casts" wx:for="{{casts}}" wx:for-item="cast" wx:key="key">
-                <image class="avatar" src="{{casts.avatars.large}}"></image>
+                <image class="avatar" src="{{cast.avatars.large}}"></image>
                 <view class="casts-name" >{{castsNameSlice[index]}}</view>
             </view>
         </scroll-view>

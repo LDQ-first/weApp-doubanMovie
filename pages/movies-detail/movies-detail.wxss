@@ -5,6 +5,10 @@
     flex-direction: column;
 }
 
+.detail .bold {
+    font-weight: bold;
+}
+
 .detail .head {
     display: flex;
     flex-direction: column;
@@ -43,8 +47,11 @@
     padding: 30rpx;
 }
 
+
+
 .detail .head .info .intro {
     flex: 1;
+    padding-right: 20rpx;
 }
 
 .detail .head .info .intro .intro-title{
@@ -53,26 +60,10 @@
    padding-bottom: 10rpx;
 }
 
-.detail .head .info .intro .intro-year{
-    color: #aaa;
-    padding-bottom: 10rpx;
-}
-
-.detail .head .info .intro .intro-orig{
-    color: #aaa;
-    padding-bottom: 10rpx;
-}
-
-.detail .head .info .intro .intro-casts{
-    color: #aaa;
-    padding-bottom: 10rpx;
-}
-
-.detail .head .info .intro .intro-dire{
-    color: #aaa;
-    padding-bottom: 10rpx;
-}   
-
+.detail .head .info .intro .intro-year,
+.detail .head .info .intro .intro-orig,
+.detail .head .info .intro .intro-casts,
+.detail .head .info .intro .intro-dire,
 .detail .head .info .intro .intro-genres{
     color: #aaa;
     padding-bottom: 10rpx;
@@ -136,7 +127,7 @@
 .detail .main .casts-dire .casts .avatar{
     width: 200rpx;
     height: 270rpx;
-    padding-bottom: 20rpx;
+    margin-bottom: 20rpx;
     box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
                 0 3px 7px 0 rgba(17, 66, 95, 0.2);
 }
