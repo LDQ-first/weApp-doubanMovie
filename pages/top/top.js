@@ -10,17 +10,11 @@ Page({
     onLoad (option) {
         console.log('load')
         let param = !Util.isEmptyObject(option) ? option : { start: 0, count: 6 }
-        console.log('option: ', option)
-        console.log('param: ', param)
         this.setData({hidden: false})
         return API.getTop(param)
                   .then(subjects => {
                       console.log('hotSubjects: ', subjects)
-                      if(this.data.subjects.length > 0 && this.data.allData) {
-                          console.log('this.data.subjects: ', this.data.subjects)
-                          console.log('this.data.subjects.concat(subjects): ', this.data.subjects.concat(subjects))
-                          console.log('this.data.allData: ', this.data.allData)
-                          console.log('this.data.allData.list.concat(Util.createList(subjects)): ', this.data.allData.list.concat(Util.createList(subjects)))
+                      if(this.data.subjects && this.data.allData) {
                           this.setData({
                                 subjects: this.data.subjects.concat(subjects),
                                 allData: {
@@ -85,7 +79,7 @@ Page({
             })
             return
         }
-        this.onLoad({ start: this.data.index, count: 100 })
+        this.onLoad({ start: this.data.index, count: 32 })
             .then(() => {
             wx.hideNavigationBarLoading()
             wx.stopPullDownRefresh()

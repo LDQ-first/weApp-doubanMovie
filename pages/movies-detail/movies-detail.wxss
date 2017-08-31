@@ -55,10 +55,14 @@
     padding-right: 20rpx;
 }
 
-.detail .head .info .intro .intro-title{
-   font-size: 3em;
+.detail .head .info .intro .intro-title {
+   font-size: 2em;
    font-weight: bold;
-   margin: 20rpx;
+   margin: 20rpx 0;
+}
+
+.detail .head .info .intro .intro-year {
+    font-size: 1.4em;
 }
 
 .detail .head .info .intro .intro-year,
@@ -93,6 +97,10 @@
     display: none;
 }
 
+.detail .head .info .grade .stars .stars-list {
+    margin-top: 0;
+}
+
 .detail .head .info .grade .grade-count {
     margin: 10rpx 0;
 }
@@ -109,11 +117,13 @@
 .detail .main .summary .summary-title {
     color: #aaa;
     font-size: 1.5em;
+    margin: 20rpx;
 }
 
 .detail .main .summary .summary-content {
     padding: 20rpx;
-    line-height: 1.5;
+    line-height: 2;
+    font-size: 1.2em;
 }
 
 .detail .main .figure {

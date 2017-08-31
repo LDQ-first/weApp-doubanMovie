@@ -6,21 +6,27 @@ Page({
 
     },
     onLoad (option) {
+        if(this.data.over) {
+            this.isOver()
+            return new Promise((resolve, reject) => {
+                resolve()
+            })
+        }
         console.log('load')
-        const _this = this
-        console.log('option.type: ', option.type)
         this.setData({
             option: option
         })
         let title = ''
         let req = {}
+        let param = this.data.index ? {start: this.data.index, count: 20} : {start: 0, count: 20}
+        this.setData({hidden: false})
         switch (option.type) {
             case 'hot' :
-              req =  API.getHot()
+              req =  API.getHot(param)
               title = '正在热映'
               break;
             case 'future' :
-              req =  API.getFuture()
+              req =  API.getFuture(param)
               title = '即将上映'
               break;
            default:
@@ -29,17 +35,14 @@ Page({
 
       return  req.then(subjects => {
                       console.log('hotSubjects: ', subjects)
+                      console.log(subjects)
                       if(subjects.length === 0) {
-                          wx.showToast({
-                            title: '没有更多数据了',
-                            duration: 2000
-                        })
+                          this.setData({
+                              over: true
+                          })
+                         this.isOver()
                         return
-                      }else if(this.data.subjects.length > 0 && this.data.allData) {
-                          console.log('this.data.subjects: ', this.data.subjects)
-                          console.log('this.data.subjects.concat(subjects): ', this.data.subjects.concat(subjects))
-                          console.log('this.data.allData: ', this.data.allData)
-                          console.log('this.data.allData.list.concat(Util.createList(subjects)): ', this.data.allData.list.concat(Util.createList(subjects)))
+                      }else if(this.data.subjects && this.data.allData) {
                           this.setData({
                                 subjects: this.data.subjects.concat(subjects),
                                 allData: {
@@ -54,7 +57,8 @@ Page({
                             allData: {
                                 title:  title, 
                                 list: Util.createList(subjects)
-                            }
+                            },
+                            index: param.start + param.count
                         })
                       }
                   })
@@ -68,6 +72,12 @@ Page({
             icon: 'loading',
             title: err.msg + '',
             duration: 2000
+        })
+    },
+    getDetail (e) {
+        const id = e.currentTarget.dataset.id
+        wx.navigateTo({
+            url: '../movies-detail/movies-detail?id=' + id
         })
     },
     onPullDownRefresh () {
@@ -87,6 +97,12 @@ Page({
                 wx.hideNavigationBarLoading()
                 wx.stopPullDownRefresh()
             })
+    },
+    isOver () {
+         wx.showToast({
+            title: '没有更多数据了',
+            duration: 2000
+        })
     }
 
 })

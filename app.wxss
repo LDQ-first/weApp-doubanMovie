@@ -1,7 +1,8 @@
 /**app.wxss**/
 page {
   font-size: 28rpx;
-  font-family: "Microsoft YaHei";
+  font-family:"Helvetica Neue", Helvetica, Arial, "PingFang SC",
+   "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: #333;
 }
 
