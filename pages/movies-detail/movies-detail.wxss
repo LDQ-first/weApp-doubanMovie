@@ -122,7 +122,8 @@
 
 .detail .main .figure .casts-dire {
    padding: 20rpx;
-   width: 100%;
+   /*width: 100%;*/
+   white-space:nowrap;
 }
 
 .detail .main .figure .casts-dire .directors,
@@ -142,7 +143,7 @@
 }
 
 .detail .main .figure .casts-dire .scrollX {
-    padding: 0 20rpx;
+    padding: 20rpx;
 }
 
 

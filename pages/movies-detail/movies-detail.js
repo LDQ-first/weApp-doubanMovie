@@ -33,22 +33,18 @@ Page({
                     .catch(this.onError)
     },
     titleSlice(name) {
-        console.log('name: ', name)
         let nameArrs = name.split(' / ')
         let newNameArrs = []
         nameArrs.forEach((nameArr, i) => {
             newNameArrs.push(Util.titleSlice(nameArr))
         })
-        console.log('newNameArrs: ', newNameArrs)
         return newNameArrs
     },
     ArrToStr(arrs) {
-        console.log('arrs: ', arrs)
         let str = ''
         arrs.forEach((arr, idx) => {
             str += arr.name + ' / '
         })
-         console.log('str: ', str.slice(0, str.length - 1))
         return str.slice(0, str.length - 2)
     },
     onError (err) {

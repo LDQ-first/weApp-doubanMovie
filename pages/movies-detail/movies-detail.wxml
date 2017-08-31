@@ -35,7 +35,6 @@
             <scroll-view scroll-x class="casts-dire">
                 <view class="directors scrollX" wx:for="{{directors}}" wx:for-item="director" wx:key="key">
                     <image class="avatar" src="{{director.avatars.large}}"></image>
-                    <view>{{key}}</view>
                     <view class="directors-name" >{{directorsNameSlice[index]}}</view>
                 </view>
                 <view class="casts scrollX" wx:for="{{casts}}" wx:for-item="cast" wx:key="key">
