@@ -3,7 +3,7 @@
 <view class="detail">
     <view class="head">
         <view class="img">
-            <view class="bg-img" style="background: url({{movie.images.large}})"></view>
+            <view class="bg-img" style="background-image: url({{movie.images.large}})"></view>
             <image class="head-img" src="{{movie.images.large}}" 
             catchtap="viewMoviePostImg" data-src="{{movie.images.large}}"></image>
         </view>
