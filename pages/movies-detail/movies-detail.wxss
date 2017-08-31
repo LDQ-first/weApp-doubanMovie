@@ -48,33 +48,40 @@
 }
 
 .detail .head .info .intro .intro-title{
-
+   font-size: 3em;
+   font-weight: bold;
+   padding-bottom: 10rpx;
 }
 
 .detail .head .info .intro .intro-year{
-
+    color: #aaa;
+    padding-bottom: 10rpx;
 }
 
 .detail .head .info .intro .intro-orig{
-
+    color: #aaa;
+    padding-bottom: 10rpx;
 }
 
 .detail .head .info .intro .intro-casts{
-
+    color: #aaa;
+    padding-bottom: 10rpx;
 }
 
 .detail .head .info .intro .intro-dire{
-
-}
+    color: #aaa;
+    padding-bottom: 10rpx;
+}   
 
 .detail .head .info .intro .intro-genres{
-
+    color: #aaa;
+    padding-bottom: 10rpx;
 }
 
 .detail .head .info .grade {
     width: 200rpx;
     height: 200rpx;
-    padding: 20rpx;
+    padding: 20rpx 10rpx;
     box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
                 0 3px 7px 0 rgba(17, 66, 95, 0.2);
     display: flex;
@@ -83,7 +90,7 @@
 }
 
 .detail .head .info .grade .grade-title{
-    color: #CCC;
+    color: #aaa;
 }
 
 .detail .head .info .grade .grade-average{
@@ -101,6 +108,16 @@
 
 .detail .main .summary {
     padding: 20rpx;
+}
+
+.detail .main .summary .summary-title {
+    color: #aaa;
+    font-size: 1.5em;
+}
+
+.detail .main .summary .summary-content {
+    padding: 20rpx;
+    line-height: 1.5;
 }
 
 .detail .main .casts-dire {
