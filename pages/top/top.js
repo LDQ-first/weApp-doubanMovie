@@ -16,7 +16,7 @@ Page({
         return API.getTop(param)
                   .then(subjects => {
                       console.log('hotSubjects: ', subjects)
-                      if(this.data.subjects && this.data.allData) {
+                      if(this.data.subjects.length > 0 && this.data.allData) {
                           console.log('this.data.subjects: ', this.data.subjects)
                           console.log('this.data.subjects.concat(subjects): ', this.data.subjects.concat(subjects))
                           console.log('this.data.allData: ', this.data.allData)
@@ -85,7 +85,7 @@ Page({
             })
             return
         }
-        this.onLoad({ start: this.data.index, count: 48 })
+        this.onLoad({ start: this.data.index, count: 100 })
             .then(() => {
             wx.hideNavigationBarLoading()
             wx.stopPullDownRefresh()

@@ -58,7 +58,7 @@
 .detail .head .info .intro .intro-title{
    font-size: 3em;
    font-weight: bold;
-   padding-bottom: 10rpx;
+   margin: 20rpx;
 }
 
 .detail .head .info .intro .intro-year,
@@ -123,6 +123,7 @@
 .detail .main .figure .figure-title {
     color: #aaa;
     font-size: 1.5em;
+    margin: 20rpx;
 }
 
 .detail .main .figure .casts-dire {
@@ -165,7 +166,7 @@
 .detail .main .data .data-allTitle {
     color: #aaa;
     font-size: 1.5em;
-    margin: 20rpx 0;
+    margin: 20rpx;
 }
 
 .detail .main .data .dataContent {
