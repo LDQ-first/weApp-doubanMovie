@@ -111,25 +111,38 @@
     line-height: 1.5;
 }
 
-.detail .main .casts-dire {
+.detail .main .figure {
+    padding: 20rpx;
+}
+
+.detail .main .figure .figure-title {
+    color: #aaa;
+    font-size: 1.5em;
+}
+
+.detail .main .figure .casts-dire {
    padding: 20rpx;
+   width: 100%;
 }
 
-.detail .main .casts-dire .directors,
-.detail .main .casts-dire .casts {
-    display: flex;
+.detail .main .figure .casts-dire .directors,
+.detail .main .figure .casts-dire .casts {
+    display: inline-flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
-.detail .main .casts-dire .directors .avatar,
-.detail .main .casts-dire .casts .avatar{
+.detail .main .figure .casts-dire .directors .avatar,
+.detail .main .figure .casts-dire .casts .avatar{
     width: 200rpx;
     height: 270rpx;
     margin-bottom: 20rpx;
     box-shadow: 0 0px 4px 0 rgba(17, 66, 95, 0.4),
                 0 3px 7px 0 rgba(17, 66, 95, 0.2);
+}
+
+.detail .main .figure .casts-dire .scrollX {
+    padding: 0 20rpx;
 }
 
 
