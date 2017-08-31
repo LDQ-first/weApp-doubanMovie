@@ -9,7 +9,9 @@ Page({
         console.log('load')
         const _this = this
         console.log('option.type: ', option.type)
-
+        this.setData({
+            option: option
+        })
         let title = ''
         let req = {}
         switch (option.type) {
@@ -27,7 +29,7 @@ Page({
               break;
         }
 
-            req.then(subjects => {
+      return  req.then(subjects => {
                       console.log('hotSubjects: ', subjects)
                       this.setData({
                           subjects: subjects,
@@ -37,6 +39,9 @@ Page({
                           } 
                       })
                   })
+                  .then(() => {
+                        this.setData({hidden: true})
+                    })
                   .catch(this.onError)
     },
     onError (err) {
@@ -46,5 +51,15 @@ Page({
             duration: 2000
         })
     },
+    onPullDownRefresh () {
+        console.log("下拉了")
+        wx.showNavigationBarLoading()
+        console.log('this.data.option: ', this.data.option)
+        this.onLoad(this.data.option)
+            .then(() => {
+            wx.hideNavigationBarLoading()
+            wx.stopPullDownRefresh()
+            })
+    }
 
 })

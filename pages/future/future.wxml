@@ -1,5 +1,5 @@
 <import src="../movies/movies.wxml"/>
 <view>
     <template is="movies" 
-    data="{{...allData, ...search, searchData, searchValue, showHead}}"/>
+    data="{{...allData, ...search, searchData, searchValue, showHead, hidden}}"/>
 </view>

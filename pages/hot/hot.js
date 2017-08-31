@@ -28,6 +28,9 @@ Page({
                           }
                       })
                   })
+                  .then(() => {
+                        this.setData({hidden: true})
+                    })
                   .catch(this.onError)
         
     },
@@ -85,5 +88,14 @@ Page({
         wx.navigateTo({
             url: '../movies-more/movies-more?type=hot'
         })
-    }
+    },
+    onPullDownRefresh () {
+        console.log("下拉了")
+        wx.showNavigationBarLoading()
+        this.onLoad()
+            .then(() => {
+            wx.hideNavigationBarLoading()
+            wx.stopPullDownRefresh()
+            })
+    },
 })

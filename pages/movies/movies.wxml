@@ -10,6 +10,6 @@
             <template is="more" data="{{searchData}}"/>
         </view>
         <template is="{{searchPanelShow ? 'searchList' : 'moviesList'}}" 
-        data="{{title, list, searchData, searchValue}}"/>
+        data="{{title, list, searchData, searchValue, hidden}}"/>
     </view>
 </template>

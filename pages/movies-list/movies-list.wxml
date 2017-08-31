@@ -1,5 +1,8 @@
 <import src="../movie/movie.wxml"/>
 <template name="moviesList">
+    <loading hidden="{{hidden}}"> 
+        加载中... 
+    </loading>
     <view class="main">
         <view class="title">
             <text>{{title}}</text>
@@ -8,6 +11,9 @@
     </view>
 </template>
 <template name="searchList">
+     <loading hidden="{{hidden}}"> 
+        加载中... 
+    </loading>
      <view class="searchResult">
         <view class="title">
             <text>{{searchValue}}</text>
